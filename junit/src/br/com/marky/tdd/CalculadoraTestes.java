@@ -1,20 +1,16 @@
 package br.com.marky.tdd;
 
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+
 public class CalculadoraTestes {
-	public static void main(String[] args) {
+	
+	@Test	
+	public void somaDeDoisNumeros() {
+		Calculadora calc = new Calculadora();
+		int soma = calc.somar(3, 7);
 		
-		Calculadora c = new Calculadora();
-		int soma = c.somar(4, 7);
-		System.out.println(soma);
-		
-		soma = c.somar(0, 7);
-		System.out.println(soma);
-		
-		soma = c.somar(0, 0);
-		System.out.println(soma);
-		
-		soma = c.somar(4, -7);
-		System.out.println(soma);
+		Assert.assertEquals(10, soma);
 	}
 
 }
